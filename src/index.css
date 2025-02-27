@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #a0aec0;
+}
+
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7fafc;
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+}
+
+body {
+  @apply bg-gray-900;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.prose {
+  @apply text-gray-100 max-w-none;
+  color: var(--text-primary);
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose pre {
+  @apply bg-gray-800 p-4 rounded-lg;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.prose code {
+  @apply text-blue-300;
+}
+
+.prose ul, .prose ol {
+  @apply my-4 pl-6;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.chat-container {
+  max-width: 100%;
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
+.message-content {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Theme transitions */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Language selection styles */
+.language-select {
+  @apply bg-gray-700 text-gray-200 border-none rounded-lg;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Dark mode specific styles */
+.dark-theme {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #a0aec0;
+}
+
+/* Light mode specific styles */
+.light-theme {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7fafc;
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+}
