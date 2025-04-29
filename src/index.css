@@ -9,6 +9,30 @@
   --text-secondary: #a0aec0;
 }
 
+<<<<<<< HEAD
+body {
+  @apply bg-gray-900;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.prose {
+  @apply text-gray-100;
+  max-width: 75ch;
+  margin: 0 auto;
+}
+
+.prose p {
+  @apply mb-6;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+.prose pre {
+  @apply bg-gray-800/90 p-6 rounded-lg mb-6;
+=======
 [data-theme="light"] {
   --bg-primary: #ffffff;
   --bg-secondary: #f7fafc;
@@ -33,6 +57,7 @@ body {
 
 .prose pre {
   @apply bg-gray-800 p-4 rounded-lg;
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
   overflow-x: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -40,6 +65,31 @@ body {
 
 .prose code {
   @apply text-blue-300;
+<<<<<<< HEAD
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+}
+
+.prose ul, .prose ol {
+  @apply my-6 pl-8;
+}
+
+.prose li {
+  @apply mb-3;
+  line-height: 1.8;
+}
+
+.prose h1 {
+  @apply text-3xl font-bold mb-6 mt-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400;
+}
+
+.prose h2 {
+  @apply text-2xl font-bold mb-5 mt-8 text-gray-100;
+}
+
+.prose h3 {
+  @apply text-xl font-bold mb-4 mt-6 text-gray-200;
+=======
 }
 
 .prose ul, .prose ol {
@@ -48,12 +98,17 @@ body {
 
 .prose li {
   @apply mb-2;
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
 }
 
 .chat-container {
   max-width: 100%;
   overflow-x: hidden;
   word-wrap: break-word;
+<<<<<<< HEAD
+  @apply px-4 md:px-8;
+=======
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
 }
 
 .message-content {
@@ -63,22 +118,170 @@ body {
 }
 
 ::-webkit-scrollbar {
+<<<<<<< HEAD
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+=======
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.2);
+<<<<<<< HEAD
+  border-radius: 3px;
+=======
   border-radius: 4px;
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 
+<<<<<<< HEAD
+.prose blockquote {
+  @apply pl-6 border-l-4 border-purple-400/50 italic text-gray-300 my-6;
+}
+
+.prose strong {
+  @apply font-semibold text-purple-300;
+}
+
+.prose em {
+  @apply italic text-blue-300;
+}
+
+.prose pre code {
+  @apply text-gray-100;
+}
+
+.message-text {
+  opacity: 1 !important;
+}
+
+.prose code:not(pre code) {
+  @apply bg-gray-700/50 px-2 py-1 rounded text-blue-300 font-medium;
+  border: none;
+}
+
+.message-section {
+  @apply mb-6 pb-6 border-b border-gray-700;
+}
+
+.message-section:last-child {
+  @apply border-b-0 mb-0;
+}
+
+.message-section-title {
+  @apply font-bold text-2xl mb-4 flex items-center gap-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400;
+}
+
+.message-section-title::before {
+  content: "→";
+  @apply text-purple-400;
+}
+
+/* Remove all animations and transitions */
+.prose *, .message-text *, .chat-message {
+  animation: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+}
+
+/* Ensure text is always crisp */
+.prose, .message-text {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced chat message styles */
+.chat-message {
+  @apply border-b border-gray-800/50;
+  background: transparent !important;
+}
+
+/* Improved code block styles */
+.code-block {
+  @apply rounded-lg overflow-hidden border border-gray-700/50;
+  background-color: rgba(31, 41, 55, 0.7);
+}
+
+.code-block pre {
+  @apply m-0 p-6;
+}
+
+/* Better spacing for chat interface */
+.chat-interface {
+  @apply max-w-4xl mx-auto;
+}
+
+/* Enhanced input styles */
+.chat-input {
+  @apply bg-gray-900/95;
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Better typography */
+.chat-text {
+  @apply text-lg leading-relaxed tracking-wide;
+}
+
+/* Enhanced scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.05);
+}
+
+/* Chat container width and padding */
+.chat-container {
+  @apply max-w-5xl mx-auto px-4 md:px-6;
+}
+
+/* Message container styling */
+.message-container {
+  background: transparent !important;
+}
+
+/* Output section styling */
+.output-section {
+  @apply rounded-lg shadow-lg;
+  background: transparent !important;
+}
+
+/* Example section styling */
+.example-section {
+  @apply p-6 rounded-lg my-6 border border-gray-700/50;
+  background: transparent !important;
+}
+
+/* Code output styling */
+.code-output {
+  @apply bg-gray-800/50 p-4 rounded-lg my-4 font-mono text-sm;
+}
+
+/* List styling */
+.custom-list {
+  @apply space-y-3 my-6;
+}
+
+.custom-list-item {
+  @apply flex items-start gap-3;
+}
+
+.custom-list-item::before {
+  content: "→";
+  @apply text-purple-400 font-bold;
+=======
 /* Theme transitions */
 .theme-transition {
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -105,4 +308,5 @@ body {
   --bg-secondary: #f7fafc;
   --text-primary: #1a202c;
   --text-secondary: #4a5568;
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
 }

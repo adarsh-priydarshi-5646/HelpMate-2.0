@@ -3,13 +3,28 @@ export interface Message {
   role: 'user' | 'assistant';
   content: string;
   timestamp: Date;
+<<<<<<< HEAD
+  type: 'text' | 'code' | 'image' | 'thinking' | 'memory' | 'search';
+=======
   type: 'text' | 'code' | 'image' | 'thinking' | 'memory';
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
   imageUrl?: string;
   imageAnalysis?: string;
   language?: string;
   isTyping?: boolean;
   memoryContext?: string;
   keywords?: string[];
+<<<<<<< HEAD
+  searchResults?: SearchResult[];
+  source?: 'gemini' | 'serpapi';
+}
+
+export interface SearchResult {
+  title: string;
+  link: string;
+  snippet: string;
+=======
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
 }
 
 export interface Chat {
@@ -51,6 +66,10 @@ export interface Settings {
   typingAnimationEnabled?: boolean;
   soundEnabled?: boolean;
   responseStyle?: 'detailed' | 'direct' | 'stepwise' | 'summary';
+<<<<<<< HEAD
+  voiceInputEnabled?: boolean;
+=======
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
 }
 
 export interface Memory {

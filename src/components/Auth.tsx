@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+import { User, Lock, Mail, LogIn, UserPlus, AlertCircle, X } from 'lucide-react';
+=======
 import { User, Lock, Mail, LogIn, UserPlus, AlertCircle } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface AuthProps {
   onLogin: (email: string, password: string) => Promise<void>;
   onSignup: (email: string, password: string, name: string) => Promise<void>;
+<<<<<<< HEAD
+  onClose: () => void;
+}
+
+export const Auth: React.FC<AuthProps> = ({ onLogin, onSignup, onClose }) => {
+=======
 }
 
 export const Auth: React.FC<AuthProps> = ({ onLogin, onSignup }) => {
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -35,6 +46,42 @@ export const Auth: React.FC<AuthProps> = ({ onLogin, onSignup }) => {
   };
 
   return (
+<<<<<<< HEAD
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+      onClick={onClose}
+    >
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        className="bg-gray-800 p-8 rounded-xl w-full max-w-md shadow-xl"
+        onClick={e => e.stopPropagation()}
+      >
+        <div className="flex justify-between items-center mb-6">
+          <motion.div 
+            className="flex items-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
+              <User className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-100">
+              {isLogin ? 'Welcome Back!' : 'Create Account'}
+            </h2>
+          </motion.div>
+          <button
+            onClick={onClose}
+            className="p-2 hover:bg-gray-700 rounded-lg text-gray-400 hover:text-gray-200"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+=======
     <div className="min-h-screen flex items-center justify-center bg-gray-900 p-4">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
@@ -54,6 +101,7 @@ export const Auth: React.FC<AuthProps> = ({ onLogin, onSignup }) => {
         <h2 className="text-2xl font-bold text-center text-gray-100 mb-8">
           {isLogin ? '👋 Welcome Back!' : '✨ Create Account'}
         </h2>
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
 
         <AnimatePresence>
           {error && (
@@ -168,6 +216,10 @@ export const Auth: React.FC<AuthProps> = ({ onLogin, onSignup }) => {
           </p>
         </form>
       </motion.div>
+<<<<<<< HEAD
+    </motion.div>
+=======
     </div>
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
   );
 };

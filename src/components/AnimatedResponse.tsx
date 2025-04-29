@@ -9,12 +9,21 @@ interface AnimatedResponseProps {
   message: Message;
   typingEnabled: boolean;
   onComplete?: () => void;
+<<<<<<< HEAD
+  characterByCharacter?: boolean;
+=======
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
 }
 
 export const AnimatedResponse: React.FC<AnimatedResponseProps> = ({
   message,
   typingEnabled,
+<<<<<<< HEAD
+  onComplete,
+  characterByCharacter = true
+=======
   onComplete
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
 }) => {
   const [isTyping, setIsTyping] = useState(typingEnabled);
   const [displayedContent, setDisplayedContent] = useState('');
@@ -40,7 +49,12 @@ export const AnimatedResponse: React.FC<AnimatedResponseProps> = ({
         if (onComplete) onComplete();
       },
       speed: 30,
+<<<<<<< HEAD
+      initialDelay: 300,
+      characterByCharacter
+=======
       initialDelay: 300
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
     });
     
     return () => {
@@ -48,7 +62,11 @@ export const AnimatedResponse: React.FC<AnimatedResponseProps> = ({
         typingControlRef.current.stop();
       }
     };
+<<<<<<< HEAD
+  }, [message.content, typingEnabled, onComplete, characterByCharacter]);
+=======
   }, [message.content, typingEnabled, onComplete]);
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
   
   const displayMessage: Message = {
     ...message,
@@ -58,7 +76,15 @@ export const AnimatedResponse: React.FC<AnimatedResponseProps> = ({
   return (
     <>
       <ChatMessage message={displayMessage} />
+<<<<<<< HEAD
+      {!isTyping && (
+        <div className="flex justify-end p-2 text-gray-400 text-sm -mt-4 sm:-mt-5 md:-mt-6 mr-2 sm:mr-3 md:mr-4">
+          Thank you! 🙏
+        </div>
+      )}
+=======
       {isTyping && <TypingIndicator />}
+>>>>>>> befea909b854328a5a5196711a23e9cc38d9d475
     </>
   );
 };
